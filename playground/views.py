@@ -12,5 +12,7 @@ def say_hello(request):
     # Transform Data
     # Send Email
     # return HttpResponse('Hello World')
+    x = 1
+    y = 2
     return render(request,'hello.html', { 'name': 'Mosh'}) 
 
