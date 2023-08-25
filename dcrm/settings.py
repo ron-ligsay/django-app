@@ -80,7 +80,7 @@ DATABASES = {
         #'NAME': BASE_DIR / 'db.sqlite3',
         'NAME': 'dcrm_db',
         'USER': 'root',
-        'PASSWORD': 'charlotte',
+        'PASSWORD': 'sql2023',
         'HOST': 'localhost',
         'PORT': '3306',
     }
