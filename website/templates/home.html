@@ -4,7 +4,31 @@
 
 {% block content %}
 
-<h1>hello world!</h1>
+<div class="col-md-6 offset-md-3">
+    <h1>Login</h1>
+    <br>
+    <form action="POST" action="{% url 'home' %}">
+        {% csrf_token %}
+        <form>
+            <div class="mb-3">
+              <label for="exampleInputEmail1" class="form-label">Email address</label>
+              <!--input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"-->
+              <input type="text" class="form-control" name="first_name" placeholder="First Name">
+              <!--div id="emailHelp" class="form-text">We'll never share your email with anyone else.</-->
+            </div>
+            <div class="mb-3">
+              <label for="exampleInputPassword1" class="form-label" >Password</label>
+              <!--input type="password" class="form-control" id="exampleInputPassword1"-->
+              <input type="password" class="form-control" name="Password" placeholder="Password">
+            </div>
+            <!--div class="mb-3 form-check">
+              <input type="checkbox" class="form-check-input" id="exampleCheck1">
+              <label class="form-check-label" for="exampleCheck1">Check me out</label>
+            </div-->
+            <button type="submit" class="btn btn-secondary">Login</button>
+          </form>
+    </form>
+</div>
 
 {% endblock content %}
 ```
