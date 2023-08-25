@@ -7,12 +7,16 @@ from django.http import HttpResponse
 # request handler
 # action
 
+def calculate():
+    x = 1
+    y = 2
+    return x + y
+
 def say_hello(request):
     # Pull data from db
     # Transform Data
     # Send Email
     # return HttpResponse('Hello World')
-    x = 1
-    y = 2
+    x = calculate()
     return render(request,'hello.html', { 'name': 'Mosh'}) 
 
