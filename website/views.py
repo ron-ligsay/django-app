@@ -3,7 +3,20 @@ from django.contrib.auth import authenticate, login, logout
 from django.contrib import messages
 from .forms import SignUpForm, AddRecordForm
 from .models import Record
+from django.http import HttpResponse
 
+import csv
+
+def export_to_csv(request):
+    records = Record.objects.all()
+    response = HttpResponse(content_type='text/csv')
+    response['Content-Disposition'] = 'attachment; filename="records.csv"'
+    writer = csv.writer(response)
+    writer.writerow(['Id','Created At','First Name', 'Last Name', 'Email', 'Phone', 'Address', 'City', 'State', 'Zip Code'])
+    record_fields = records.values_list('id','created_at','first_name', 'last_name', 'email', 'phone', 'address', 'city', 'state', 'zip_code')
+    for record in record_fields:
+        writer.writerow(record)
+    return response
 
 def logout_user(request):
     logout(request)
