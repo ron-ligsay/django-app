@@ -1,6 +1,7 @@
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth.models import User
 from django import forms
+from .models import Record
 
 
 class SignUpForm(UserCreationForm):
@@ -30,3 +31,53 @@ class SignUpForm(UserCreationForm):
         self.fields["password2"].label = ""
         self.fields["password2"].help_text = "<span class='form-text text-muted'><small>Enter the same password as before, for verification.</small></span>"
 
+# Create Add Record Form
+class AddRecordForm(forms.ModelForm):
+    first_name = forms.CharField(label="",widget=forms.TextInput(attrs={'class':'form-control','placeholder': 'First Name'}),max_length=100, required=True)
+    last_name = forms.CharField(label="",widget=forms.TextInput(attrs={'class':'form-control','placeholder': 'Last Name'}),max_length=100, required=True)
+    email = forms.EmailField(label="",widget=forms.TextInput(attrs={'class':'form-control','placeholder': 'Email Address'}),max_length=100, required=True)
+    phone = forms.CharField(label="",widget=forms.TextInput(attrs={'class':'form-control','placeholder': 'Phone Number'}),max_length=15, required=True)
+    address = forms.CharField(label="",widget=forms.TextInput(attrs={'class':'form-control','placeholder': 'Address'}),max_length=100, required=True)
+    city = forms.CharField(label="",widget=forms.TextInput(attrs={'class':'form-control','placeholder': 'City'}),max_length=50, required=True)
+    state = forms.CharField(label="",widget=forms.TextInput(attrs={'class':'form-control','placeholder': 'State'}),max_length=50, required=True)
+    zip_code = forms.CharField(label="",widget=forms.TextInput(attrs={'class':'form-control','placeholder': 'Zip Code'}),max_length=20, required=True)
+
+    class Meta:
+        model = Record
+        exclude = ("user",)
+        #fields = ('first_name', 'last_name', 'email', 'phone', 'address', 'city', 'state', 'zip_code')
+
+    # def __init__(self, *args, **kwargs):
+    #     super(AddRecordForm, self).__init__(*args, **kwargs)
+
+    #     self.fields["first_name"].widget.attrs['class'] = 'form-control'
+    #     self.fields["first_name"].widget.attrs['placeholder'] = 'First Name'
+    #     self.fields["first_name"].label = ""
+
+    #     self.fields["last_name"].widget.attrs['class'] = 'form-control'
+    #     self.fields["last_name"].widget.attrs['placeholder'] = 'Last Name'
+    #     self.fields["last_name"].label = ""
+
+    #     self.fields["email"].widget.attrs['class'] = 'form-control'
+    #     self.fields["email"].widget.attrs['placeholder'] = 'Email Address'
+    #     self.fields["email"].label = ""
+
+    #     self.fields["phone"].widget.attrs['class'] = 'form-control'
+    #     self.fields["phone"].widget.attrs['placeholder'] = 'Phone Number'
+    #     self.fields["phone"].label = ""
+
+    #     self.fields["address"].widget.attrs['class'] = 'form-control'
+    #     self.fields["address"].widget.attrs['placeholder'] = 'Address'
+    #     self.fields["address"].label = ""
+
+    #     self.fields["city"].widget.attrs['class'] = 'form-control'
+    #     self.fields["city"].widget.attrs['placeholder'] = 'City'
+    #     self.fields["city"].label = ""
+
+    #     self.fields["state"].widget.attrs['class'] = 'form-control'
+    #     self.fields["state"].widget.attrs['placeholder'] = 'State'
+    #     self.fields["state"].label = ""
+
+    #     self.fields["zip_code"].widget.attrs['class'] = 'form-control'
+    #     self.fields["zip_code"].widget.attrs['placeholder'] = 'Zip Code'
+    #     self.fields["zip_code"].label = ""
