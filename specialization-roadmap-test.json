@@ -1,0 +1,77 @@
+[
+{"type":"header","version":"5.2.0","comment":"Export to JSON plugin for PHPMyAdmin"},
+{"type":"database","name":"specialization-roadmap-test"},
+{"type":"table","name":"course","database":"specialization-roadmap-test","data":
+[
+{"CourseID":"1","CourseName":"HTML","CourseDescription":"HTML stands for HyperText Markup Language. It is a standard markup language for web page creation. It allows the creation and structure of sections, paragraphs, and links using HTML elements (the building blocks of a web page) such as tags and attributes. \r\n\r\n","CourseStatus":"1"},
+{"CourseID":"2","CourseName":"CSS","CourseDescription":"CSS or Cascading Style Sheets is the language used to style the frontend of any website. CSS is a cornerstone technology of the World Wide Web, alongside HTML and JavaScript.","CourseStatus":"0"},
+{"CourseID":"3","CourseName":"JavaScript","CourseDescription":"JavaScript allows you to add interactivity to your pages. Common examples that you may have seen on the websites are sliders, click interactions, popups and so on.","CourseStatus":"0"},
+{"CourseID":"4","CourseName":"Git","CourseDescription":"Git is a free and open source distributed version control system designed to handle everything from small to very large projects with speed and efficiency.","CourseStatus":"0"},
+{"CourseID":"5","CourseName":"Internet","CourseDescription":"The Internet is a global network of computers connected to each other which communicate through a standardized set of protocols.","CourseStatus":"0"},
+{"CourseID":"6","CourseName":"PHP","CourseDescription":"PHP is a general purpose scripting language often used for making dynamic and interactive Web pages. It was originally created by Danish-Canadian programmer Rasmus Lerdorf in 1994. The PHP reference implementation is now produced by The PHP Group and supported by PHP Foundation. PHP supports procedural and object-oriented styles of programming with some elements of functional programming as well.","CourseStatus":"0"},
+{"CourseID":"7","CourseName":"Python","CourseDescription":"Python is a computer programming language often used to build websites and software, automate tasks, and conduct data analysis. Python is a general-purpose language, meaning it can be used to create a variety of different programs and isn’t specialized for any specific problems.","CourseStatus":"0"},
+{"CourseID":"8","CourseName":"Data Collection","CourseDescription":"Data Collection is the process to gather relevant data for further analysis from a variety of sources such as Relational Databases, Web Scraping, APIs, etc. Pandas library in Python provides various methods to collect data from different sources.","CourseStatus":"0"},
+{"CourseID":"9","CourseName":"Data Wrangling","CourseDescription":"Data Wrangling is the preparation and transformation of data in an easier way to further analyze. It requires cleaning the data, preparing the data, feature engineering, etc. Pandas and NumPy libraries can help you with methods and functions needed for Data Wrangling and manipulation.","CourseStatus":"0"}
+]
+}
+,{"type":"table","name":"resources","database":"specialization-roadmap-test","data":
+[
+{"ResourceID":"1","CourseID":"1","Title":"HTML Basics Explained","Link":"https:\/\/www.hostinger.ph\/tutorials\/what-is-html"},
+{"ResourceID":"2","CourseID":"1","Title":"W3Schools: Learn HTML","Link":"https:\/\/www.w3schools.com\/html\/html_intro.asp"},
+{"ResourceID":"3","CourseID":"2","Title":"Learn CSS - Codecademy","Link":"https:\/\/www.codecademy.com\/learn\/learn-css"},
+{"ResourceID":"4","CourseID":"2","Title":"CSS Complete Course","Link":"https:\/\/youtu.be\/n4R2E7O-Ngo"},
+{"ResourceID":"5","CourseID":"3","Title":"W3Schools ? JavaScript Tutorial","Link":"https:\/\/www.w3schools.com\/js\/"},
+{"ResourceID":"6","CourseID":"3","Title":"The Modern JavaScript Tutorial","Link":"https:\/\/javascript.info\/"},
+{"ResourceID":"7","CourseID":"4","Title":"Git & GitHub Crash Course For Beginners","Link":"https:\/\/www.youtube.com\/watch?v=SWYqp7iY_Tc"},
+{"ResourceID":"8","CourseID":"4","Title":"Tutorial: Git for Absolutely Everyone","Link":"https:\/\/thenewstack.io\/tutorial-git-for-absolutely-everyone\/"},
+{"ResourceID":"9","CourseID":"5","Title":"How does the Internet Work?","Link":"https:\/\/cs.fyi\/guide\/how-does-internet-work"},
+{"ResourceID":"10","CourseID":"5","Title":"The Internet Explained","Link":"https:\/\/www.vox.com\/2014\/6\/16\/18076282\/the-internet"},
+{"ResourceID":"11","CourseID":"6","Title":"Learn PHP - W3Schools","Link":"https:\/\/www.w3schools.com\/php\/"},
+{"ResourceID":"12","CourseID":"6","Title":"PHP for Beginners","Link":"https:\/\/www.youtube.com\/watch?v=U2lQWR6uIuo&list=PL3VM-unCzF8ipG50KDjnzhugceoSG3RTC"}
+]
+}
+,{"type":"table","name":"roadmap","database":"specialization-roadmap-test","data":
+[
+{"RoadmapID":"1","SpecializationID":"1","CourseID":"5","Step":"1"},
+{"RoadmapID":"2","SpecializationID":"1","CourseID":"1","Step":"2"},
+{"RoadmapID":"3","SpecializationID":"1","CourseID":"2","Step":"3"},
+{"RoadmapID":"4","SpecializationID":"1","CourseID":"3","Step":"4"},
+{"RoadmapID":"5","SpecializationID":"1","CourseID":"4","Step":"5"},
+{"RoadmapID":"6","SpecializationID":"2","CourseID":"5","Step":"1"},
+{"RoadmapID":"7","SpecializationID":"2","CourseID":"4","Step":"2"},
+{"RoadmapID":"8","SpecializationID":"2","CourseID":"3","Step":"3"},
+{"RoadmapID":"9","SpecializationID":"2","CourseID":"6","Step":"4"},
+{"RoadmapID":"10","SpecializationID":"3","CourseID":"1","Step":"1"},
+{"RoadmapID":"11","SpecializationID":"3","CourseID":"2","Step":"2"},
+{"RoadmapID":"12","SpecializationID":"3","CourseID":"3","Step":"3"},
+{"RoadmapID":"13","SpecializationID":"4","CourseID":"7","Step":"1"},
+{"RoadmapID":"14","SpecializationID":"4","CourseID":"8","Step":"2"},
+{"RoadmapID":"15","SpecializationID":"4","CourseID":"9","Step":"3"},
+{"RoadmapID":"16","SpecializationID":"5","CourseID":"7","Step":"1"},
+{"RoadmapID":"17","SpecializationID":"5","CourseID":"8","Step":"2"},
+{"RoadmapID":"18","SpecializationID":"5","CourseID":"9","Step":"3"}
+]
+}
+,{"type":"table","name":"specialization","database":"specialization-roadmap-test","data":
+[
+{"SpecializationID":"1","SpecializationName":"Frontend Developer","SpecializationDescription":"Front-end development is the development of visual and interactive elements of a website that users interact with directly. It's a combination of HTML, CSS and JavaScript, where HTML provides the structure, CSS the styling and layout, and JavaScript the dynamic behaviour and interactivity.\r\n\r\nAs a front-end developer, you'll be responsible for creating the user interface of a website, to ensure it looks good and is easy to use, with great focus on design principles and user experience. You'll be","LastOpenDate":"2023-07-29 16:54:10"},
+{"SpecializationID":"2","SpecializationName":"Backend Developer","SpecializationDescription":"Backend web development is the part of web development that deals with the server-side of a web application. This includes creating and managing the server-side logic, connecting the application to a database, creating server-side APIs, handling user authentication and authorization, and processing and responding to user requests. It often involves the use of programming languages such as Python, Java, Ruby, PHP, JavaScript (Node.js), and .NET languages.\r\n\r\n","LastOpenDate":"2023-07-29 12:54:10"},
+{"SpecializationID":"3","SpecializationName":"Full Stack Developer","SpecializationDescription":"A full stack web developer is a person who can develop both client and server software.","LastOpenDate":"2023-07-29 07:54:10"},
+{"SpecializationID":"4","SpecializationName":"Data Scientist","SpecializationDescription":"Data scientists determine the questions their team should be asking and figure out how to answer those questions using data. They often develop predictive models for theorizing and forecasting.","LastOpenDate":"2023-07-29 14:46:22"},
+{"SpecializationID":"5","SpecializationName":"Machine Learning Engineer","SpecializationDescription":"Machine learning engineers act as critical members of the data science team. Their tasks involve researching, building, and designing the artificial intelligence responsible for machine learning and maintaining and improving existing artificial intelligence systems.","LastOpenDate":"2023-07-29 12:54:10"},
+{"SpecializationID":"6","SpecializationName":"QA Engineer","SpecializationDescription":"","LastOpenDate":"2023-07-28 20:11:01"},
+{"SpecializationID":"7","SpecializationName":"Software Engineer","SpecializationDescription":"","LastOpenDate":"2023-07-28 20:11:01"},
+{"SpecializationID":"8","SpecializationName":"Security Engineer","SpecializationDescription":"","LastOpenDate":"2023-07-28 20:11:01"}
+]
+}
+,{"type":"table","name":"user","database":"specialization-roadmap-test","data":
+[
+{"UserID":"1","username":"Jesriel Ledesma","email":"jesriel@gmail.com","password":"jesriel123"},
+{"UserID":"2","username":"Test ","email":"test@gmail.com","password":"test123"},
+{"UserID":"3","username":"Aky Ligsay","email":"ligsay@gmail.com","password":"ligsay123"},
+{"UserID":"4","username":"CL Boceso","email":"boceso@gmail.com","password":"boceso"},
+{"UserID":"5","username":"Kristof Pambid","email":"pambid@gmail.com","password":"pambid123"},
+{"UserID":"6","username":"Decelyn Kalaw","email":"kalaw@gmail.com","password":"kalaw123"}
+]
+}
+]
