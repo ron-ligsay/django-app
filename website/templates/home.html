@@ -28,7 +28,7 @@
       {% for record in records %}
       <td><a href="{% url 'record' record.id %}" class="link-dark link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover">{{ record.id }}</a></td>
       <td>{{ record.created_at }}</td>
-      <td>{{ record.first_name }} {{ record.last_name }}</td>
+      <td><a href="{% url 'record' record.id %}" class="link-dark link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover">{{ record.first_name }} {{ record.last_name }}</a></td>
       <td>{{ record.email }}</td>
       <td>{{ record.phone }}</td>
       <td>{{ record.address }}</td>
