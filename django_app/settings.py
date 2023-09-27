@@ -40,7 +40,8 @@ INSTALLED_APPS = [
     'playground',
     'debug_toolbar',
     'store',
-    'tags'
+    'tags',
+    'users'
 ]
 
 MIDDLEWARE = [
@@ -83,6 +84,7 @@ WSGI_APPLICATION = 'django_app.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
+
 
 DATABASES = {
     'default': {
@@ -132,3 +134,4 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+AUTH_USER_MODEL = 'users.NewUser'
