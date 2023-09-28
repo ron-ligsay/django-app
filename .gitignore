@@ -1,0 +1,4 @@
+*/__pycache__/*
+**/__pycache__/*
+*/migrations/*.py
+users/migrations/0001_initial.py
