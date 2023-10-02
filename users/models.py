@@ -8,15 +8,15 @@ from django.db import models
 
 class User(AbstractUser):
     class Role(models.TextChoices):
-        ADMIN = "ADMIN",'Admin','admin'
-        STUDENT = 'STUDENT','Student','student'
-        TEACHER = 'TEACHER','Teacher','teacher'
+        ADMIN = "ADMIN",'Admin'#,'admin'
+        STUDENT = 'STUDENT','Student'#,'student'
+        TEACHER = 'TEACHER','Teacher'#,'teacher'
 
     base_role = Role.ADMIN
 
     role = models.CharField(max_length=50, choices=Role.choices)
 
-    def save(self, *arg, **kwargs):
+    def save(self, *args, **kwargs):
         if not self.pk:
             self.role = self.base_role
             return super().save(*args, **kwargs)

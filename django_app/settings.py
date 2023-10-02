@@ -87,9 +87,17 @@ WSGI_APPLICATION = 'django_app.wsgi.application'
 
 
 DATABASES = {
+    # 'default': {
+    #     'ENGINE': 'django.db.backends.sqlite3',
+    #     'NAME': BASE_DIR / 'db.sqlite3',
+    # }
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'django_app',#config('DB_NAME', default='courseu_db'),#
+        'USER': 'root',
+        'PASSWORD': 'sql2023',
+        'HOST': 'localhost',
+        'PORT': '3306',
     }
 }
 
