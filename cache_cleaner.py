@@ -81,7 +81,7 @@ def check():
     find_pyc_files(directory_to_search)
     print_migration_files(excluded_files)
 
-# deleter
+# deleterpy
 def delete():
     find_and_delete_pyc_files(directory_to_search)
     remove_migration_files(excluded_files)
